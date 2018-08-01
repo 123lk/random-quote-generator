@@ -1,21 +1,27 @@
 import React, { Component } from "react";
 
 class QuoteBox extends Component {
-  render () {
-    return (
-      <div>
-        <div className="card">
-          <div className="card-body">
-            <blockquote className="blockquote mb-0">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-              <footer className="blockquote-footer" style={styles.author}>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-            </blockquote>
-            <button style={styles.newQuoteButton}>Get new quote</button>
-            <button style={styles.twitterButton}>Twitter</button>
+  render () { 
+    if (this.props.quote !== null) {
+      return (
+        <div>
+          <div className="card">
+            <div className="card-body">
+              <blockquote className="blockquote mb-0">
+                <p>{this.props.quote.quote}</p>
+                <footer className="blockquote-footer" style={styles.author}>{this.props.quote.author}</footer>
+              </blockquote>
+              <button style={styles.newQuoteButton} onClick={this.props.handleNewQuoteClick}>Get new quote</button>
+              <button style={styles.twitterButton}><a className="twitter-share-button"
+              href={`https://twitter.com/intent/tweet?hashtags=quote,inspirational&text="${this.props.quote.quote}"\u00A0${this.props.quote.author}`} target="_blank" rel="noopener noreferrer">
+            Tweet</a></button>
+            </div>
           </div>
         </div>
-      </div>
-    );
+      );
+    } else {
+      return null;
+    }
   }
 }
 

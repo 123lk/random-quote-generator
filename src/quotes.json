@@ -1,0 +1,20 @@
+{
+  "quotes": [
+    {
+      "quote": "I am a quote",
+      "author": "Some Person"
+    },
+    {
+      "quote": "I am a quote 2",
+      "author": "Some Person 2"
+    },
+    {
+      "quote": "I am a quote 3",
+      "author": "Some Person 3"
+    },
+    {
+      "quote": "I am a quote 4",
+      "author": "Some Person 4"
+    }
+  ]
+}
