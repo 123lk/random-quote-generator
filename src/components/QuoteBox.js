@@ -7,7 +7,7 @@ class QuoteBox extends Component {
         <div>
           <div className="card" style={{ maxWidth: "500px" }}>
             <div className="card-body">
-              <blockquote className="blockquote mb-0">
+              <blockquote className="blockquote mb-0 quote"> 
                 <p>{this.props.quote.quote}</p>
                 <footer className="blockquote-footer" style={styles.author}>
                   {this.props.quote.author}
@@ -15,7 +15,7 @@ class QuoteBox extends Component {
               </blockquote>
               <button
                 type="button"
-                class="btn btn-outline-secondary"
+                className="btn btn-outline-secondary"
                 style={styles.newQuoteButton}
                 onClick={this.props.handleNewQuoteClick}
               >
@@ -23,7 +23,7 @@ class QuoteBox extends Component {
               </button>
               <button
                 type="button"
-                class="btn btn-light"
+                className="btn btn-light"
                 style={styles.twitterButton}
               >
                 <a
@@ -34,7 +34,7 @@ class QuoteBox extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i class="fa fa-twitter" style={{fontSize: '26px'}}/>
+                  <i className="fa fa-twitter" style={{fontSize: '26px'}}/>
                 </a>
               </button>
             </div>
